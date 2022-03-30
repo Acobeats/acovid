@@ -1,120 +1,127 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap");
+@font-face {
+  font-family: "hanson-bold";
+  src: url("Fonts/Hanson-Bold.otf") format("opentype"),
+    url("Fonts/Hanson-Bold.otf") format("woff"),
+    url("Fonts/Hanson-Bold.otf") format("svg"),
+    url("Fonts/Hanson-Bold.otf") format("truetype");
+}
 
 .App {
-    text-align: center;
+  text-align: center;
 }
 
 .Landing-button {
-    margin-top: 70px;
-    height: 8vmin;
-    width: 25vmin;
-    font-size: calc(20px + 2vmin);
-    text-align: center;
-    min-width: 180px;
-    min-height: 60px;
-    background-color: #005d7f;
-    color: #cfc9a1;
-    font-weight: bolder;
+  margin-top: 70px;
+  height: 8vmin;
+  width: 25vmin;
+  font-size: calc(20px + 2vmin);
+  text-align: center;
+  min-width: 180px;
+  min-height: 60px;
+  background-color: #005d7f;
+  color: #cfc9a1;
+  font-weight: bolder;
 }
 
 .Landing-button:hover {
-    color: #fbff00;
+  color: #fbff00;
 }
 
 .nav-link {
-    font-family: 'Oleo Script';
-    font-size: 25px;
-    color: #cfc9a1;
+  font-family: "hanson-bold";
+  font-size: 25px;
+  color: #cfc9a1;
 }
 
 .nav-link:hover {
-    color: #fbff00;
+  color: #fbff00;
 }
 
 .home-div {
-    background-color: #282c34;
-    min-height: 97vh;
+  background-color: #282c34;
+  min-height: 97vh;
 }
 
 .home-body {
-    margin-top: 50px;
-    padding-bottom: 17px;
+  margin-top: 50px;
+  padding-bottom: 17px;
 }
 
 .My-navbar {
-    padding-left: 20px;
-    padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .offcanvas-backdrop.show {
-    opacity: 0;
+  opacity: 0;
 }
 
 .offcanvas {
-    top: 40%;
-    right: 0;
-    width: auto;
-    background-color: #282c34;
-    margin-right: 17px;
+  top: 40%;
+  right: 0;
+  width: auto;
+  background-color: #282c34;
+  margin-right: 17px;
 }
 
-.brandTitle {
-    font-size: 40px;
-    font-family: 'Alfa Slab One';
+.title {
+  font-family: "hanson-bold";
+  font-size: 40px;
 }
 
 .brandLink {
-    text-decoration: none;
-    color: #cfc9a1;
+  text-decoration: none;
+  color: #cfc9a1;
 }
 
 .brandLink:hover {
-    color: #fbff00;
+  color: #fbff00;
 }
 
 .offcanvas-end {
-    border: 0;
+  border: 0;
 }
 
 .App-logo {
-    max-height: 60vmin;
-    margin-top: 20px;
+  max-height: 60vmin;
+  margin-top: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 .App-header {
-    background-color: #282c34;
-    min-height: 97vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+  background-color: #282c34;
+  min-height: 97vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
 .App-link {
-    color: #61dafb;
+  color: #61dafb;
 }
 
 footer {
-    min-height: 3vh;
-    background-color: #282c34;
-    color: #cfc9a1;
+  min-height: 3vh;
+  background-color: #282c34;
+  color: #cfc9a1;
 }
 
 @keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
 
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
