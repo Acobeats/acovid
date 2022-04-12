@@ -1,6 +1,6 @@
 import { Button } from 'react-bootstrap';
-import logo from '../logo.png'
-import { useNavigate } from 'react-router-dom'
+import logo from '../logo.png';
+import { useNavigate } from 'react-router-dom';
 
 const Landing = () => {
     const navigate = useNavigate()
@@ -12,5 +12,6 @@ const Landing = () => {
             </Button>
         </header>
     )
-}
-export default Landing
+};
+
+export default Landing;

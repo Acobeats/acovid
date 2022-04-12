@@ -40,6 +40,9 @@ const Home = () => {
               <Link to="/about" className="nav-link">
                 About
               </Link>
+              <Link to="/store" className="nav-link">
+                Store
+              </Link>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
