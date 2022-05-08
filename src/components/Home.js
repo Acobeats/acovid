@@ -7,9 +7,10 @@ import {
   Button,
   Image,
 } from "react-bootstrap";
-import logo from "../logo.png";
-import video from "../parallax.mp4";
-import parallax from "../parallax.gif";
+import logo from "../acopics/logo.png";
+import pic1 from "../acopics/pic1.jpg";
+import pic2 from "../acopics/pic2.jpg";
+import pic3 from "../acopics/pic3.jpg";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -19,7 +20,7 @@ const Home = () => {
         <Navbar.Brand>
           <Link to="/" className="brandLink">
             <span to="/" className="title">
-              ACO BEATS
+              Acobeats
             </span>
           </Link>
         </Navbar.Brand>
@@ -31,24 +32,23 @@ const Home = () => {
         >
           <Offcanvas.Body>
             <Nav className="justify-content-center flex-grow-1 pe-3">
-              <Link to="/home" className="nav-link">
-                Home
-              </Link>
-              <Link to="/" className="nav-link">
-                Landing
-              </Link>
               <Link to="/about" className="nav-link">
                 About
               </Link>
               <Link to="/store" className="nav-link">
                 Store
               </Link>
+              <Link to="/contact" className="nav-link">
+                Contact
+              </Link>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Navbar>
       <Container className="home-body">
-        <Image src={parallax} width="400" />
+        <Image src={pic1}/>
+        <Image src={pic2}/>
+        <Image src={pic3}/>
       </Container>
     </div>
   );

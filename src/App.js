@@ -1,4 +1,4 @@
-import logo from './logo.png';
+import logo from './acopics/logo.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { useState } from 'react';
@@ -11,6 +11,7 @@ import About from './components/About';
 import Landing from './components/Landing';
 import Footer from './components/Footer';
 import Store from './components/Store';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
                 <Route exact path='/' element={<Landing />}/>
                 <Route path='/about' element={<About />}/>
                 <Route path='/store' element={<Store />}/>
+                <Route path='/contact' element={<Contact />}/>
             </Routes>
             <Footer/>
     </div>

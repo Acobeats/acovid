@@ -1,7 +1,7 @@
 const Footer = () => {
     return(
         <footer>
-            Fake Copyright &copy; 2022
+        Copyright 2022 &copy; acobeats
         </footer>
     );
 }

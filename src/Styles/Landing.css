@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "hanson-bold";
+    src: url("../Fonts/Hanson-Bold.otf") format("opentype"),
+      url("../Fonts/Hanson-Bold.otf") format("woff"),
+      url("../Fonts/Hanson-Bold.otf") format("svg"),
+      url("../Fonts/Hanson-Bold.otf") format("truetype");
+  }
+
+.cssbuttons-io-button {
+    background: #025f7e;
+    color: #cdc597;
+    font-family: "hanson-bold";
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #025f7e;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    margin-top: 47px;
+   }
+   
+   .cssbuttons-io-button .icon {
+    background: #cdc597;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #025f7e;
+    right: 0.3em;
+    transition: all 0.3s;
+   }
+   
+   .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+   }
+   
+   .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #025f7e;
+   }
+   
+   .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+   }
+   
+   .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+   }
