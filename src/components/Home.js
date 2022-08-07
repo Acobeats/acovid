@@ -1,17 +1,17 @@
 import {
   Navbar,
   Container,
-  NavDropdown,
   Nav,
   Offcanvas,
-  Button,
-  Image,
+  Card
 } from "react-bootstrap";
-import logo from "../acopics/logo.png";
+// import logo from "../acopics/logo.png";
 import pic1 from "../acopics/pic1.jpg";
 import pic2 from "../acopics/pic2.jpg";
 import pic3 from "../acopics/pic3.jpg";
 import { Link } from "react-router-dom";
+import '../Styles/HomePhotos.css';
+import '../App.css';
 
 const Home = () => {
   return (
@@ -46,9 +46,36 @@ const Home = () => {
         </Navbar.Offcanvas>
       </Navbar>
       <Container className="home-body">
-        <Image src={pic1}/>
-        <Image src={pic2}/>
-        <Image src={pic3}/>
+        <Card style={{width: '23rem'}} className="pics" bg='dark' text='light'>
+          <Card.Img variant="top" src={pic1} />
+          {/* <Card.Body>
+            <Card.Title>Card Title</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the bulk of
+              the card's content.
+            </Card.Text>
+          </Card.Body> */}
+        </Card>
+        <Card style={{ width: '23rem' }} className="pics" bg='dark' text='light'>
+          <Card.Img variant="top" src={pic2} />
+          {/* <Card.Body>
+            <Card.Title>Card Title</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the bulk of
+              the card's content.
+            </Card.Text>
+          </Card.Body> */}
+        </Card>
+        <Card style={{ width: '23rem'}} className="pics" bg='dark' text='light'>
+          <Card.Img variant="top" src={pic3} />
+          {/* <Card.Body>
+            <Card.Title>Card Title</Card.Title>
+            <Card.Text>
+              Some quick example text to build on the card title and make up the bulk of
+              the card's content.
+            </Card.Text>
+          </Card.Body> */}
+        </Card>
       </Container>
     </div>
   );

@@ -23,13 +23,18 @@
 }
 
 .home-div {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background: rgb(40,44,52);
+  background: linear-gradient(338deg, rgba(40,44,52,1) 46%, rgba(2,95,126,1) 100%);
   min-height: 97vh;
 }
 
 .home-body {
   margin-top: 50px;
   padding-bottom: 17px;
+  display: flex;
+  justify-content: center;
+
 }
 
 .My-navbar {
@@ -38,14 +43,14 @@
 }
 
 .offcanvas-backdrop.show {
-  opacity: 0;
+  opacity: 55%;
 }
 
 .offcanvas {
   top: 40%;
   right: 0;
   width: auto;
-  background-color: #282c34;
+  background-color: transparent;
   margin-right: 17px;
 }
 
@@ -79,7 +84,9 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background: rgb(40,44,52);
+  background: linear-gradient(155deg, rgba(40,44,52,1) 46%, rgba(2,95,126,1) 100%);
   min-height: 97vh;
   display: flex;
   flex-direction: column;
