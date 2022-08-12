@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import { Navbar } from "./Home";
 import Players from '../Styles/Store.css';
 
 function Store() {
     return(
-        <div>
+        <div className="home-div">
             <ul>
                 <iframe src="//www.beatstars.com/embed/track/?id=10966808"
                 width="55%"
@@ -23,6 +24,9 @@ function Store() {
                 height="130">
                 </iframe>
             </ul>
+            <div>
+                    <Link to='/home'>Go Back</Link>
+                </div>
         </div>
     );
 }
