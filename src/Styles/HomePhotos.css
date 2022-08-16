@@ -1,3 +1,21 @@
 .pics {
     margin: auto;
 }
+
+.carouselSize {
+
+  max-width: 45%;
+ 
+    margin: auto;
+    min-width: 300px;
+    background: rgb(40,44,52);
+ 
+}
+.spotifySize {
+
+    max-width: 45%;
+    margin: auto;
+    min-width: 300px;
+    height: 200px; 
+ 
+}

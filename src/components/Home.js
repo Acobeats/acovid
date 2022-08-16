@@ -3,7 +3,7 @@ import {
   Container,
   Nav,
   Offcanvas,
-  Card
+  Carousel
 } from "react-bootstrap";
 // import logo from "../acopics/logo.png";
 import pic1 from "../acopics/pic1.jpg";
@@ -12,6 +12,7 @@ import pic3 from "../acopics/pic3.jpg";
 import { Link } from "react-router-dom";
 import '../Styles/HomePhotos.css';
 import '../App.css';
+
 
 const Home = () => {
   return (
@@ -45,38 +46,49 @@ const Home = () => {
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Navbar>
-      <Container className="home-body">
-        <Card style={{width: '23rem'}} className="pics" bg='dark' text='light'>
-          <Card.Img variant="top" src={pic1} />
-          {/* <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content.
-            </Card.Text>
-          </Card.Body> */}
-        </Card>
-        <Card style={{ width: '23rem' }} className="pics" bg='dark' text='light'>
-          <Card.Img variant="top" src={pic2} />
-          {/* <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content.
-            </Card.Text>
-          </Card.Body> */}
-        </Card>
-        <Card style={{ width: '23rem'}} className="pics" bg='dark' text='light'>
-          <Card.Img variant="top" src={pic3} />
-          {/* <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the bulk of
-              the card's content.
-            </Card.Text>
-          </Card.Body> */}
-        </Card>
-      </Container>
+   
+ <Carousel className="carouselSize" >
+      <Carousel.Item  >
+        <img
+          className="d-block w-100"
+          src={pic1}
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h4>AcoBeats</h4>
+          <p>Acobeats en su salseta</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={pic2}
+          alt="Second slide"
+        />
+        <Carousel.Caption>
+        <h4>AcoBeats</h4>
+          <p>Acobeats en su salseta</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={pic3}
+          alt="Third slide"
+        />
+        <Carousel.Caption>
+        <h4>AcoBeats</h4>
+          <p>Acobeats en su salseta</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+</Carousel>
+   
+  <div className="spotifySize" >
+    <iframe  
+    src="https://open.spotify.com/embed/playlist/2IvzE1oLOXC6pHYApcxrh0?utm_source=generator"  width="100%" height="190px">   
+   
+    </iframe>
+  </div>
     </div>
   );
 };
