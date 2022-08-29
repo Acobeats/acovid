@@ -1,5 +1,5 @@
 import React from "react";
-import {Form} from 'react-bootstrap';
+import {useForm} from 'react-hook-form';
 import { Link } from 'react-router-dom'
 import '../App.css';
 import '../Styles/Contact.css';
@@ -7,50 +7,47 @@ import '../Styles/Landing.css';
 
 
 function Contact(){
-let emailName
-let messageName
+    const { register, formState:{errors}, handleSubmit } = useForm();
 
-    const handleSubmit = async e => {
-       
-        if ( !emailName  || !messageName ){
-            alert('Sos un puto Escribi algo'); 
-            console.log('adan putete')
-            return
-        }
-        e.preventDefault ();
-        console.log('aca apreto un putete')
+    const onSubmit = (data) => {
+        console.log(data);
     }
-    return(
+ 
+     return(
         <div className="home-div">
-        <Form id="form-size" onSubmit={handleSubmit}>
-            <Form.Group  className="form-letter" controlId="exampleForm.ControlInput1">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control className='form-letter' type="email" placeholder="name@example.com" name="emailName" />
-            </Form.Group>
-            <Form.Group className="form-letter" controlId="exampleForm.ControlTextarea1">
-                <Form.Label>Message</Form.Label>
-                <Form.Control as="textarea" rows={3} name="messageName"/>
-            </Form.Group>
-            
-            <div className="form-button">
-            <button  className='cssbuttons-io-button' type="submit">Send 
-                <div className="icon">
-                    <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0h24v24H0z" fill="none"></path><path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" fill="currentColor">
-                        </path>
-                    </svg>
-                </div>  
-            </button>
-            </div>
-            
-        </Form>
+            <h2>Formulario</h2>
+            <form className="form-letter" onSubmit={handleSubmit(onSubmit)}>
                 <div>
-                    <Link to='/home'>Go Back</Link>
+                    <label>Nombre</label>
+                    <input type="text" {...register('nombre', {
+                        required: true,
+                        minLength: 3,
+                    })} />
+                    {errors.nombre?.type === 'required' && <p>El campo nombre es requerido</p>}
                 </div>
+                <div>
+                    <label>Email</label>
+                    <input type="text" {...register('email', {
+                        pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i,
+                        required: true,
+
+                    })} />
+                    {errors.email?.type === 'pattern' && <p>El formato del email es incorrecto</p>}
+                    {errors.email?.type === 'required' && <p>El campo email es requerido</p>}
+
+                </div>
+                <div>
+                    <label>Asunto</label>
+                    <input type="text" {...register('asunto', {
+                        required: true
+                    })} />
+                    {errors.asunto?.type === 'required' && <p>El campo asunto es requerido</p>}                       
+
+                </div>
+                <input type="submit" value="Enviar"/>
+            </form>
         </div>
-
-
-
+    
     );
 }
 
