@@ -4,12 +4,28 @@ import { Link } from 'react-router-dom'
 import '../App.css';
 import '../Styles/Contact.css';
 import '../Styles/Landing.css';
+import axios from "axios";
 
+const baseURL = "http://localhost:3001/emailinfo";
 
 function Contact(){
+
     const { register, formState:{errors}, handleSubmit } = useForm();
 
+    function createPost(name, email, asunto) {
+        axios
+          .post(baseURL, {
+            name,
+            email,
+            asunto
+          })
+          .then((response) => {
+            // setPost(response.data);
+          });
+      }
+
     const onSubmit = (data) => {
+       {createPost({name: data.nombre, email: data.email, asunto: data.asunto})}
        console.log(data) ;
     }
  
