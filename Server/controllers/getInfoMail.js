@@ -1,5 +1,6 @@
 const axios = require('axios');
 const nodemailer = require("nodemailer");
+require ("dotenv").config();
 
 // Make a request for a user with a given ID
 
@@ -9,8 +10,8 @@ const getInfoMail = async (req, res) => {
         host: "smtp.mailtrap.io",
         port: 2525,
         auth: {
-          user: "c4c1266bbe7ee3",
-          pass: "8650557b99465d"
+          user: (process.env.SMTP_MAIL_USER),
+          pass: (process.env.SMTP_MAIL_PASS)
         }
       });
     
